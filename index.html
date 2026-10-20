@@ -1,37 +1,52 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PLACEHOLDER: Your Name | Personal Profile</title>
+  <title>Portfolio: Ravikant Sharma | Personal Profile</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1>PLACEHOLDER: Your Name</h1>
-    <p class="tagline">PLACEHOLDER: Short professional tagline, e.g. Web Developer</p>
+  <header class="site-header" id="home">
+    <h1>Ravikant Sharma</h1>
+    <p class="tagline">B.Tech Computer Science Engineering student.</p>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a> |
+      <a href="#about">About Me</a> |
+      <a href="#skills">Skills</a> |
+      <a href="#projects">Projects</a> |
+      <a href="#contact">Contact Information</a>
+    </nav>
+
+    <!-- Replace profile.jpg with your photograph's filename -->
+    
+    <div class="profile-container">
+    <img
+      src="profile.jpg"
+      alt="Ravikant Sharma"
+      class="profile-photo"
+    >
+  </div>
   </header>
 
   <main>
     <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">About</h2>
+      <h2 id="about-heading">About Me</h2>
       <p>
-        PLACEHOLDER: Write a short introduction about yourself. Mention your background,
-        what you enjoy working on, and what you are looking for next.
+        I’m a B.Tech Computer Science Engineering student with a strong interest in software development, web technologies, and problem-solving. I enjoy building practical projects, learning new technologies, and continuously improving my technical skills. I’m looking forward to applying my knowledge to real-world challenges and growing as a software developer.
       </p>
-      <p>
-        PLACEHOLDER: Add a second paragraph with location, education, or interests.
-      </p>
+      
     </section>
 
     <section id="skills" aria-labelledby="skills-heading">
       <h2 id="skills-heading">Skills</h2>
       <ul>
-        <li>Python</li>
+        <li>C</li>
         <li>C++</li>
-        <li>Java</li>
-        <li>PLACEHOLDER: Skill four (e.g. Git)</li>
-        <li>PLACEHOLDER: Skill five (e.g. Responsive design)</li>
+        <li>HTML</li>
+        <li>CSS</li>
       </ul>
     </section>
 
@@ -39,25 +54,63 @@
       <h2 id="projects-heading">Projects</h2>
       <ul class="projects">
         <li>
-          <a href="https://example.com/placeholder-project-one">PLACEHOLDER: Project One Title</a>
-          <p>PLACEHOLDER: One-sentence description of project one.</p>
+          <a href="https://github.com/ravikantsharma06/python_programm_collection.git">Python Programm Collection</a>
+          <p>A collection of Python programming projects focused on building strong programming fundamentals and problem-solving skills. Includes projects on Factorial, Fibonacci Series, and basic Python program structure, making it ideal for beginners to practice and improve their coding skills.</p>
         </li>
+
         <li>
-          <a href="https://example.com/placeholder-project-two">PLACEHOLDER: Project Two Title</a>
-          <p>PLACEHOLDER: One-sentence description of project two.</p>
+          <a href="https://jee-handwritten-notes.netlify.app/">NOTES</a>
+          <p>JEE handwritten notes explained in detail and in simple language.</p>
         </li>
+
         <li>
-          <a href="https://example.com/placeholder-project-three">PLACEHOLDER: Project Three Title</a>
-          <p>PLACEHOLDER: One-sentence description of project three.</p>
+          <a href="https://jee-handwritten-notes.netlify.app/">NOTES</a>
+          <p>JEE handwritten notes explained in detail and in simple language.</p>
+        </li>
+
+        <li>
+          <a href="https://quiz-kappa-one-99.vercel.app/">Quiz</a>
+          <p>An interactive quiz website designed to test your knowledge, improve learning, and make practicing fun. Built using HTML, CSS, and JavaScript with a simple and user-friendly interface.</p>
+        </li>
+
+        <li>
+          <a href="https://bookreadinglist.vercel.app/">Book Reading List Application</a>
+          <p>A simple and responsive Student Reading List web app that helps you organize your books, track reading progress, and manage reading statuses such as Want to Read, Reading, and Finished. Built with a clean interface for a smooth and enjoyable reading experience..</p>
         </li>
       </ul>
+
+     
+    </section>
+
+    <section id="weather">
+      <h2>Weather</h2>
+
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter a city"
+      >
+
+      <button id="weatherButton">Get Weather</button>
+
+      <div id="weatherResult">
+        Enter a city to see the weather.
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>PLACEHOLDER: Contact email or social profile URL</p>
+  <footer class="site-footer" id="contact">
+    <h2>Contact Information</h2>
+    <p>Email:
+      <a href="mailto:ravikantsharmaku@gmail.com">ravikantsharmaku@gmail.com</a>
+    </p>
+    <p>GitHub:
+      <a href="https://github.com/ravikantsharma06" target="_blank" rel="noopener noreferrer">ravikantsharma06</a>
+    </p>
   </footer>
+
   <button id="themeToggle">Switch to Dark Mode</button>
+
   <script src="script.js"></script>
 </body>
 </html>
