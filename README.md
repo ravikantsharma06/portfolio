@@ -8,7 +8,9 @@ Keep it near the top.
 
 
 For a portfolio, use:
+https://github.com/ravikantsharma06/portfolio/blob/6705cdda7f458e4953c299d99cedbb91dfeb2403/image%20(2).png
 
+https://github.com/ravikantsharma06/portfolio/blob/6705cdda7f458e4953c299d99cedbb91dfeb2403/image%20(1).png
 The guide asks for screenshots of the actual working project. 
 
 
