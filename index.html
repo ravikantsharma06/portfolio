@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio: Ravikant Sharma | Personal Profile</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chatbot.css">
 </head>
 <body>
   <header class="site-header" id="home">
@@ -99,6 +100,38 @@
       </div>
     </section>
   </main>
+  <section id="aiChatSection" class="ai-chat">
+    <h2>Ask My AI Assistant</h2>
+  
+    <p>
+      Ask questions about this portfolio,
+      projects, and technologies.
+    </p>
+  
+    <div
+      id="chatMessages"
+      aria-live="polite"
+    ></div>
+  
+    <div class="chat-controls">
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Ask a question..."
+      />
+  
+      <button id="sendButton" type="button">
+        Send
+      </button>
+    </div>
+  
+    <p id="chatStatus" role="status"></p>
+  
+    <p class="chat-note">
+      AI chat is available during the local
+      classroom demonstration only.
+    </p>
+  </section>
 
   <footer class="site-footer" id="contact">
     <h2>Contact Information</h2>
@@ -113,5 +146,7 @@
   <button id="themeToggle">Switch to Dark Mode</button>
 
   <script src="script.js"></script>
+  <script src="config.js"></script>
+  <script src="chatbot.js"></script>
 </body>
 </html>
