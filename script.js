@@ -58,3 +58,84 @@ async function getWeather() {
         console.error(error);
     }
 }
+
+
+
+const skillButtons = document.querySelectorAll(".skill-btn");
+const projectCards = document.querySelectorAll(".projects li");
+const showAllSkills = document.getElementById("showAllSkills");
+
+function showAllProjects() {
+  projectCards.forEach((project) => {
+    project.hidden = false;
+    project.classList.remove("skill-match");
+  });
+
+  skillButtons.forEach((button) => {
+    button.classList.remove("active");
+    button.setAttribute("aria-pressed", "false");
+  });
+}
+const noResults = document.getElementById("noResults");
+if (noResults) {
+  noResults.hidden = true;
+}
+
+// Skills heading par click karne se sabhi projects wapas dikhenge
+showAllSkills?.addEventListener("click", showAllProjects);
+
+// Kisi skill par click karne se sirf us skill ke projects dikhenge
+skillButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const selectedSkill = button.dataset.skill
+      .trim()
+      .toLowerCase();
+
+    let found = false;
+
+    projectCards.forEach((project) => {
+      const skills = (project.dataset.skills || "")
+        .toLowerCase()
+        .split(/\s+/)
+        .filter(Boolean);
+
+      const matches = skills.includes(selectedSkill);
+
+      project.hidden = !matches;
+      if (matches) found = true;
+    });
+
+    skillButtons.forEach((btn) => {
+      const isActive = btn === button;
+      btn.classList.toggle("active", isActive);
+      btn.setAttribute("aria-pressed", String(isActive));
+    });
+
+    const noResults = document.getElementById("noResults");
+    if (noResults) {
+      noResults.hidden = found;
+    }
+
+    document.getElementById("projects")
+      ?.scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+
+/* Scroll to top and bottom buttons */
+const scrollToTopButton = document.getElementById("scrollToTop");
+const scrollToBottomButton = document.getElementById("scrollToBottom");
+
+scrollToTopButton?.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+scrollToBottomButton?.addEventListener("click", () => {
+  window.scrollTo({
+    top: document.documentElement.scrollHeight,
+    behavior: "smooth"
+  });
+});

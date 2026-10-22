@@ -13,13 +13,17 @@
     <h1>Ravikant Sharma</h1>
     <p class="tagline">B.Tech Computer Science Engineering student.</p>
 
-    <nav aria-label="Main navigation">
-      <a href="#home">Home</a> |
-      <a href="#about">About Me</a> |
-      <a href="#skills">Skills</a> |
-      <a href="#projects">Projects</a> |
-      <a href="#contact">Contact Information</a>
-    </nav>
+   
+<nav aria-label="Main navigation">
+  <a href="#home">Home</a> |
+  <a href="#about">About Me</a> |
+  <a href="#skills">Skills</a> |
+  <a href="#projects">Projects</a> |
+  <a href="#weather">Weather</a> |
+  <a href="#aiChatSection">Ask My Assistant</a> |
+  <a href="#contact">Contact Information</a>
+</nav>
+
 
     <!-- Replace profile.jpg with your photograph's filename -->
     <!--
@@ -42,45 +46,56 @@
       
     </section>
 
-    <section id="skills" aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Skills</h2>
-      <ul>
-        <li>C</li>
-        <li>C++</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </section>
+    
+<section id="skills" aria-labelledby="skills-heading">
+  <h2 id="skills-heading">
+    <button id="showAllSkills" type="button">
+      Skills
+    </button>
+  </h2>
+  <ul>
+    <li><button class="skill-btn" data-skill="c">C</button></li>
+    <li><button class="skill-btn" data-skill="c++">C++</button></li>
+    <li><button class="skill-btn" data-skill="python">Python</button></li>
+    <li><button class="skill-btn" data-skill="html">HTML</button></li>
+    <li><button class="skill-btn" data-skill="css">CSS</button></li>
+    <li><button class="skill-btn" data-skill="javascript">Java Script</button></li>
+    <li><button class="skill-btn" data-skill="pe">Prompt Engineering</button></li>
+  </ul>
+</section>
+
 
     <section id="projects" aria-labelledby="projects-heading">
       <h2 id="projects-heading">Projects</h2>
       <ul class="projects">
-        <li>
+        <li data-skills="python">
           <a href="https://github.com/ravikantsharma06/python_programm_collection.git">Python Programm Collection</a>
           <p>A collection of Python programming projects focused on building strong programming fundamentals and problem-solving skills. Includes projects on Factorial, Fibonacci Series, and basic Python program structure, making it ideal for beginners to practice and improve their coding skills.</p>
         </li>
 
-        <li>
+        <li data-skills="python">
           <a href="https://github.com/ravikantsharma06/messy_code.git">Messy_code</a>
           <p>Messy Code is a collection of coding experiments, practice programs, and projects created to learn, explore, and improve programming skills.</p>
         </li>
 
-        <li>
+        <li data-skills="python">
           <a href="https://github.com/ravikantsharma06/messy_python_code_improvement.git">Messy Python Code Improvement</a>
           <p>A Python project focused on improving messy code by enhancing readability, simplifying logic, and applying clean coding practices to create more organized, maintainable, and efficient programs.</p>
         </li>
 
-        <li>
+        <li data-skills="html css javascript">
           <a href="https://quiz-kappa-one-99.vercel.app/">Quiz</a>
           <p>An interactive quiz website designed to test your knowledge, improve learning, and make practicing fun. Built using HTML, CSS, and JavaScript with a simple and user-friendly interface.</p>
         </li>
 
-        <li>
+        <li data-skills="pe">
           <a href="https://bookreadinglist.vercel.app/">Book Reading List Application</a>
           <p>A simple and responsive Student Reading List web app that helps you organize your books, track reading progress, and manage reading statuses such as Want to Read, Reading, and Finished. Built with a clean interface for a smooth and enjoyable reading experience..</p>
         </li>
       </ul>
-
+      <p id="noResults" hidden>
+        No results available for this skill.
+      </p>
      
     </section>
 
@@ -143,6 +158,22 @@
     </p>
   </footer>
 
+  <div class="page-scroll-controls" aria-label="Page navigation">
+    <button
+      id="scrollToTop"
+      type="button"
+      aria-label="Scroll to top"
+      title="Go to top"
+    >↑</button>
+  
+    <button
+      id="scrollToBottom"
+      type="button"
+      aria-label="Scroll to bottom"
+      title="Go to bottom"
+    >↓</button>
+  </div>
+  
   <button id="themeToggle">Switch to Dark Mode</button>
 
   <script src="script.js"></script>
