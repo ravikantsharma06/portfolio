@@ -139,3 +139,4 @@ scrollToBottomButton?.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+process.env.GROQ_API_KEY
