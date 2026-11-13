@@ -4,7 +4,7 @@ const chatMessages = document.getElementById("chatMessages");
 const chatStatus = document.getElementById("chatStatus");
 
 // Temperature for our experiment
-let chatTemperature = 0.7;
+let chatTemperature = 0.2;
 
 function showChatMessage(role, text) {
   const message = document.createElement("div");
